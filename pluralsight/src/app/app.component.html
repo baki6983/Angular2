@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+
+<app-nav></app-nav>
+<div>
+<h1>Upcoming Angular 2 Events</h1>
+</div>
+<events-app></events-app>
+<div class="row">
+  <div class="col-md-5"  *ngFor="let event of events">
+    <app-thumbnail (click)="toastMessage(event.name)" [event]="event"></app-thumbnail>
+    <div>
+</div>
+</div>

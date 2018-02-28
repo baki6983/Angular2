@@ -1,0 +1,24 @@
+
+<style>
+.thumbnail{ min-height: 220px;}
+.well div{color:#bbb}
+.hoverwell:hover {
+  background-color: #485563;
+  cursor: pointer;
+  .pointable {
+  cursor: pointer;
+}
+}
+</style>
+  <div [routerLink]="['/events',event.id]" class="well hoverwell thumbnail" >
+    <h2 style="color:light-blue">{{event?.name}}</h2>
+    <div>Date:{{event?.date}}</div>
+    <div>Time:{{event?.time}}</div>
+    <div>Price:${{event?.price}}</div>
+    <div *ngIf="event?.location">
+      <span>Location:{{event?.location?.address}}</span>
+      <span style="margin-left:10px">{{event.location?.city}},
+        {{event.location?.country}}</span>
+    </div>
+    <div *ngIf="event?.onlineUrl">OnlineUrl:{{event?.onlineUrl}} <div>
+  </div>
